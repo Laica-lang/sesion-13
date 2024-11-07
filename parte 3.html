@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 2</title>
+</head>
+<body>
+    <script>
+    let num1 = parseInt(prompt("Ingresa el primer número: "), 10);
+    let num2 = parseInt(prompt("Ingresa el segundo número: "), 10);
+    let operacion = parseInt(prompt("Ingresa la operación (1: sumar, 2: restar, 3: multiplicar, 4: dividir): "))
+    
+    let resultado = calculadora(num1, num2, operacion);
+    alert("El resultado de la operación es: " + resultado);
+    function sumar(a, b) {
+        return a + b;
+    }
+    
+    function restar(a, b) {
+        return a - b;
+    }
+    
+    function multiplicar(a, b) {
+        return a * b;
+    }
+    
+    function dividir(a, b) {
+        if (b === 0) {
+            return 'No se puede dividir por cero';
+        }
+        return a / b;
+    }
+    
+    function calculadora(a, b, operacion) {
+         switch (operacion) {
+            case 1: return sumar(a, b);
+            case 2: return restar(a, b); 
+            case 3: return multiplicar(a, b); 
+            case 4: return dividir(a, b); 
+            default: return 'Operación no válida'; }
+         }
+    </script>
+    
+    
+   
+    
+    
+</body>
+</html>
